@@ -6,8 +6,13 @@
 
      tasks:
        - name: CREATE TENANT
-         bcf_methods2: controller={{ controller_ip }} username={{ un }} password={{ pwd }} tenant_name="test-tenant3"
+         #no_log: True
+         bcf_methods2: controller={{ controller_ip }} username={{ un }} password={{ pwd }} tenant_name="test-tenant4"
 
-       - name: DUMP FACTS TO TERMINAL
-         debug: var=bsnbcf
+       - name: CREATE SEGMENT
+         #no_log: True
+         bcf_methods2: controller={{ controller_ip }} username={{ un }} password={{ pwd }} tenant_name="test-tenant4" segment_name="test-segment"
+
+         #- name: DUMP FACTS TO TERMINAL
+         #debug: var=bsnbcf
 
