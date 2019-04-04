@@ -7,6 +7,8 @@ The facts gathered can be used as inputs to other modules or used in templates t
 
 * The facts returned for Big Cloud Fabric are returned as a dictionary using the key `bsnbcf`.
 * The facts returned for Big Monitoring Fabric are returned as a dictionary using the key `bsnbmf`.
+* Creating tenant.
+* Creating Segment.
 
 
 [Example Playbook](bsn.yml):
