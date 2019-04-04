@@ -12,14 +12,14 @@
         switch: 'any'
      tasks:
        - name: CREATE TENANT
-         #no_log: True
+         no_log: True
          bcf_methods_tenant:
                 controller={{ controller_ip }}
                 username={{ un }}
                 password={{ pwd }}
                 tenant_name={{ tenant_name }}
        - name: CREATE SEGMENT
-         #no_log: True
+         no_log: True
          bcf_methods_segment:
                 controller={{ controller_ip }}
                 username={{ un }}
