@@ -409,22 +409,22 @@ def main():
     #tenant_name = 'tenant_B'
     #fab.create_tenant(tenant_name)
 
-    '''
     ######################
     # ## CREATE SEGMENT  ###
     ######################
-
-    tenant_name = 'tenant_A'
+    #fab.create_segment(segment_name)
+    #tenant_name = 'tenant_name'
     vlan_id = '1000'
-    segment_name = 'web'
+    #segment_name = 'segment_name'
     port_group = 'any'
     interfaces = 'any'
     switch = 'any'
-    print 'hhhhhhhhhhhhhhhhhhhh'
+   # print 'hhhhhhhhhhhhhhhhhhhh'
     fab.create_segment(tenant_name, segment_name, vlan_id,
                        port_group, interfaces, switch)
 
 
+    '''
     ##############################
     # ## CREATE LOGICAL ROUTER  ###
     ##############################
