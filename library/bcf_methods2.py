@@ -361,18 +361,24 @@ def main():
     fab = BigCloudFabric(controller_ip=controller,
                             username=username,
                             password=password)
-
+    facts = fab.facts()
+    #module.exit_json(ansible_facts=dict(bsnbcf=facts))
+    module.exit_json()
 
     #fab = BigCloudFabric(controller_ip='3.0.91.58',
      #                    username='admin', password='bsn123')
 
-    '''
     ##################
     # ## GET FACTS  ###
     ##################
-    facts = fab.facts()
-    print json.dumps(facts, indent=4)
-    print '=' * 50
+    #facts = fab.facts()
+    #python 2 style
+    #print json.dumps(facts, indent=4)
+    #python 3 style
+    #print ( json.dumps(facts(), indent=4) )
+    #print '=' * 50
+    
+    '''
     #########################
     # ## PROVISION LEAF1  ###
     #########################
