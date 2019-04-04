@@ -1,0 +1,29 @@
+---
+
+   - name: GATHER FACTS FROM BIG SWITCH CONTROLLERS
+     hosts: bcf
+     connection: local
+     vars:
+        tenant_name: 'test-tenant'
+        segment_name: 'test-segment'
+        vlan_id: '1000'
+        port_group: 'any'
+        interfaces: 'any'
+        switch: 'any'
+     tasks:
+       - name: CREATE SEGMENT
+         #no_log: True
+         bcf_methods_segment:
+                controller={{ controller_ip }}
+                username={{ un }}
+                password={{ pwd }}
+                tenant_name={{ tenant_name }}
+                segment_name={{ segment_name }}
+                vlan_id={{ vlan_id }}
+                port_group={{ port_group }}
+                interfaces={{ interfaces }}
+                switch={{ switch }}
+
+         #- name: DUMP FACTS TO TERMINAL
+         #debug: var=bsnbcf
+
