@@ -150,3 +150,21 @@ bcf_lab                   : ok=2    changed=0    unreachable=0    failed=0
 
 ```
 
+
+Creating Tenant:
+
+```
+$ ansible-playbook -i hosts tenant.yml 
+```
+
+Creating Segment:
+
+```
+$ ansible-playbook -i hosts segment.yml 
+```
+
+Creating Tenant & Segment:
+
+```
+$ ansible-playbook -i hosts tenant-segment.yml 
+```
