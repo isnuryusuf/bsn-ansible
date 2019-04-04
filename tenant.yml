@@ -1,0 +1,13 @@
+---
+
+   - name: GATHER FACTS FROM BIG SWITCH CONTROLLERS
+     hosts: bcf
+     connection: local
+
+     tasks:
+       - name: CREATE TENANT
+         bcf_methods2: controller={{ controller_ip }} username={{ un }} password={{ pwd }} tenant_name="test-tenant3"
+
+       - name: DUMP FACTS TO TERMINAL
+         debug: var=bsnbcf
+
